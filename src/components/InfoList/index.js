@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-class PostPerfil extends Component {
+class InfoList extends Component {
 
     state = {
-   posts: [
+    infos: [
         {
         nome: 'Seu nome',
         ocupacao: 'Developer',
@@ -58,12 +58,12 @@ class PostPerfil extends Component {
     }
 
     render(){
-        const { posts } = this.state
+        const { infos } = this.state
 
         return(
             <div className = "post-perfil">{
-                posts.map(post => {
-                    <Post key={post.id} conteudo={post} />
+                infos.map(info => {
+                    <Post key={info.id} conteudo={info} />
                 })
             }
             </div>
@@ -71,4 +71,4 @@ class PostPerfil extends Component {
     }
 }
 
-export default PostPerfil
+export default InfoList

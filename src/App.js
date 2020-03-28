@@ -4,18 +4,7 @@ import "./style.css"
 function App() {
   return (
     <main>
-      <div className="perfil">
-        <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Perfil" />
-      </div>
-      <div className="biografia">
-        <h1>
-          Seu <br /> Nome
-        </h1>
-        <div className="ocupacao">Developer</div>
-        <p>18 anos, solteira e vida loca.</p>
-      </div>
-
-      <div className="titulo">
+        <div className="titulo">
         Perfil <br /> Profissional
       </div>
 
