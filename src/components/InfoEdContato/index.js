@@ -1,4 +1,5 @@
 import React from 'react'
+import InfoEd from '../InfoEd/index'
 
 function InfoEdContato(props){
     const { tipo, contato } = props.contato
@@ -19,21 +20,18 @@ function InfoEdContato(props){
             </li>
           </div>
         </div>
+
+        {instituicao.map(inst => (
+            <InfoEd conteudo={inst} key={inst.id} />
+        ))
+        }
+
+        {curso.map(curs => (
+            <InfoEd conteudo={curs} key={curs.id} />
+        ))
+        }
         </aside>
     )
 }
 
 export default InfoEdContato
-
-
-// educacao: [
-//     {
-//     id: 1,
-//     instituicao: 'EMEF',
-//     curso: 'Ensino basico'
-//     },
-//     {
-//     id: 2,
-//     instituicao: 'ETEC',
-//     curso: 'Como ser dev'
-//     }

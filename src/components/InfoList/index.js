@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import InfoEdContato from '../InfoEdContato'
 
 class InfoList extends Component {
 
@@ -61,9 +62,9 @@ class InfoList extends Component {
         const { infos } = this.state
 
         return(
-            <div className = "post-perfil">{
+            <div className = "lista-de-contatos">{
                 infos.map(info => {
-                    <Post key={info.id} conteudo={info} />
+                    <InfoEdContato key={info.id} conteudo={info} />
                 })
             }
             </div>
