@@ -1,18 +1,13 @@
 import React from 'react'
 
 function InfoEd(props) {
-  const { instituicao, curso } = props.educacao
+  const { instituicao, curso } = props.conteudo
 
   return (
-     <div className="sidebar">
-      <h3>Educação</h3>
-      <div className="lista-de-formacao">
         <li>
           <h4>{instituicao}</h4>
           <p>{curso}</p>
         </li>
-      </div>
-    </div>
   )
 }
 

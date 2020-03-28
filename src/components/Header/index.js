@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Header(props){
-    const { nome, ocupacao, resumo, perfilProfissional } = props.infos
+    const { nome, ocupacao, resumo, perfilProfissional } = props
 
     return(
     <header>

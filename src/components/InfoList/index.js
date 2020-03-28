@@ -1,37 +1,40 @@
 import React, { Component } from 'react'
-import InfoEdContato from '../InfoEdContato'
+import Header from '../Header'
+import InfoEducacao from '../InfoEducacao'
+import InfoContato from '../InfoContato'
+import InfoEx from '../InfoEx'
 
 class InfoList extends Component {
 
     state = {
     infos: [
         {
-        nome: 'Seu nome',
+        nome: 'Lara Santos',
         ocupacao: 'Developer',
-        resumo: '20 anos, solteira e vida loca.',
+        resumo: '20 anos, namora e vida loca.',
         perfilProfissional: 'Faço miojo bom',
         contatos: [
             {
             id: 1,
-            tipo: 'telefone',
-            contato: '19 0000-0000'
+            tipo: 'Telefone',
+            contato: '19 0000 0000'
             },
             {
             id: 2,
-            tipo: 'email',
+            tipo: 'Email',
             contato: 'nome@dev.com'
             }
         ],
         educacao: [
             {
             id: 1,
-            instituicao: 'EMEF',
-            curso: 'Ensino basico'
+            instituicao: 'Desenvolvimento de Jogos Digitais',
+            curso: 'Ensino Superior'
             },
             {
             id: 2,
-            instituicao: 'ETEC',
-            curso: 'Como ser dev'
+            instituicao: 'José Ferreira da Silva',
+            curso: 'Ensino Médio'
             }
         ],
         experiencia: [
@@ -62,12 +65,55 @@ class InfoList extends Component {
         const { infos } = this.state
 
         return(
-            <div className = "lista-de-contatos">{
-                infos.map(info => {
-                    <InfoEdContato key={info.id} conteudo={info} />
-                })
+        
+        <div> {
+            infos.map(info =>(
+            <div>
+
+                <Header key={info.nome} 
+                nome={info.nome}
+                ocupacao={info.ocupacao}
+                resumo={info.resumo}
+                perfilProfissional={info.perfilProfissional}
+                />
+
+            <aside>
+                    <div className="sidebar">
+                    <h3>Contatos</h3>
+
+                    <div className="lista-de-contatos">
+                        {info.contatos.map(contato => (
+                            <InfoContato conteudo={contato} key={contato.id} />
+                            ))
+                        }
+                    </div>
+                    </div>
+
+                    <div className="sidebar">
+                        <h3>Educação</h3>
+                        <div className="lista-de-formacao">
+                            {info.educacao.map(formacao => (
+                                <InfoEducacao conteudo={formacao} key={formacao.id} />
+                                ))
+                            }
+                        </div>
+                    </div>
+            </aside>
+                    <div className="experience">
+                        <h2>Experiência Profissional</h2>
+                            <button>Mostrar atual</button> <br></br> <br></br>
+                            {info.experiencia.map(trabalho => (
+                                <InfoEx conteudo={trabalho} key={trabalho.id} />
+                                ))
+                            }
+                    </div>
+                </div>
+            
+            ))
+            
             }
-            </div>
+        </div> 
+        
         )
     }
 }
