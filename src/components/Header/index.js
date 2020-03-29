@@ -4,7 +4,7 @@ function Header(props){
     const { nome, ocupacao, resumo, perfilProfissional } = props
 
     return(
-    <header>
+    <>
      <div className="perfil">
         <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Perfil" />
       </div>
@@ -25,7 +25,7 @@ function Header(props){
          {perfilProfissional}
         </p>
       </div>
-    </header>
+    </>
     )
 }
 

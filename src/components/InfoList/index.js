@@ -3,6 +3,7 @@ import Header from '../Header'
 import InfoEducacao from '../InfoEducacao'
 import InfoContato from '../InfoContato'
 import InfoEx from '../InfoEx'
+import InfoEd from '../InfoEducacao'
 
 class InfoList extends Component {
 
@@ -103,13 +104,15 @@ class InfoList extends Component {
                     <div className="experience">
                         <h2>Experiência Profissional</h2>
                             {
-                            isShowAtual ? info.experiencia.filter(trabalho => trabalho.atual) :
+                            this.state.isShowAtual ? info.experiencia.filter(trabalho => trabalho.atual).map(trabalho => (
+                                <InfoEx conteudo={trabalho} key={trabalho.id} />
+                                )) :
                             info.experiencia.map(trabalho => (
                                 <InfoEx conteudo={trabalho} key={trabalho.id} />
                                 )) 
                             } 
                     </div>
-                    <button onClick = {this.setState({...this.state,
+                    <button onClick = { () => this.setState({...this.state,
                             isShowAtual: !this.state.isShowAtual, })}>Mostrar atual</button> 
             </div>
             
