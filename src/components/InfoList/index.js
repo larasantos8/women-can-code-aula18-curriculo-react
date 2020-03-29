@@ -45,7 +45,7 @@ class InfoList extends Component {
             empresa: 'NASA',
             local: 'Nova York',
             conteudo: 'Fazia nada e ganhava bem',
-            atual: true
+            atual: true,
             },
             {
             id: 2,
@@ -58,7 +58,8 @@ class InfoList extends Component {
             }
         ]
         }
-    ]
+    ],
+     isShowAtual: false
     }
 
     render(){
@@ -77,7 +78,7 @@ class InfoList extends Component {
                 perfilProfissional={info.perfilProfissional}
                 />
 
-            <aside>
+                <aside>
                     <div className="sidebar">
                     <h3>Contatos</h3>
 
@@ -98,16 +99,19 @@ class InfoList extends Component {
                             }
                         </div>
                     </div>
-            </aside>
+                </aside>
                     <div className="experience">
                         <h2>Experiência Profissional</h2>
-                            <button>Mostrar atual</button> <br></br> <br></br>
-                            {info.experiencia.map(trabalho => (
+                            {
+                            isShowAtual ? info.experiencia.filter(trabalho => trabalho.atual) :
+                            info.experiencia.map(trabalho => (
                                 <InfoEx conteudo={trabalho} key={trabalho.id} />
-                                ))
-                            }
+                                )) 
+                            } 
                     </div>
-                </div>
+                    <button onClick = {this.setState({...this.state,
+                            isShowAtual: !this.state.isShowAtual, })}>Mostrar atual</button> 
+            </div>
             
             ))
             

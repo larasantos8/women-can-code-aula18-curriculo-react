@@ -5,7 +5,7 @@ import InfoList from "./components/InfoList";
 function App() {
   return (
   <>
-  <InfoList />
+  <InfoList/>
     
   </>
 
