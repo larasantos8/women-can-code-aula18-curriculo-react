@@ -23,7 +23,7 @@ class InfoList extends Component {
             {
             id: 2,
             tipo: 'Email',
-            contato: 'nome@dev.com'
+            contato: 'laarasantos12@gmail.com'
             }
         ],
         educacao: [
@@ -41,20 +41,29 @@ class InfoList extends Component {
         experiencia: [
             {
             id: 1,
-            cargo: 'Front',
-            periodo: 'Agosto 2019',
-            empresa: 'NASA',
-            local: 'Nova York',
-            conteudo: 'Fazia nada e ganhava bem',
+            cargo: 'Analista de Sucesso do Cliente',
+            periodo: 'Dezembro 2019 - Atualmente',
+            empresa: 'Superlógica',
+            local: 'Campinas-SP',
+            conteudo: 'Responsável por acompanhar o ciclo de vida dos clientes, planejando estratégias para clientes potenciais e em risco. Realizar consultorias sobre o sistema , avaliar indicadores de performance, propor soluções, recolher feedbacks e analisar métricas de satisfação',
             atual: true,
             },
             {
             id: 2,
-            cargo: 'Back',
-            periodo: 'Agosto 2018 - Agosto 2019',
-            empresa: 'CIA',
-            local: 'Boston',
-            conteudo: 'Fazia nada e ganhava mal',
+            cargo: 'Especialista em Atendimento ao Cliente',
+            periodo: 'Maio 2019 - Novembro 2019',
+            empresa: 'Monde Sistemas',
+            local: 'Americana-SP',
+            conteudo: 'Encarregada de oferecer suporte aos usuários solucionando dúvidas em relação ao sistema e atuando na resolução de problemas técnicos. Auxiliando na implantação na máquina do cliente e realizando a configuração de módulos de nota fiscal e emissão de boletos. Responsável por dar treinamento para novos clientes sobre partes do sistema e instruir funcionários aprendizes.',
+            atual: false
+            },
+            {
+            id: 3,
+            cargo: 'Estagiária em Atendimento ao Cliente',
+            periodo: 'Agosto 2018 - Abril 2019',
+            empresa: 'Monde Sistemas',
+            local: 'Americana-SP',
+            conteudo: 'Aprendendo sobre o sistema e oferecendo suporte aos usuários solucionando dúvidas em relação ao sistema e atuando na resolução de problemas técnicos.',
             atual: false
             }
         ]
