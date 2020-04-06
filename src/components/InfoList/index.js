@@ -3,7 +3,6 @@ import Header from '../Header'
 import InfoEducacao from '../InfoEducacao'
 import InfoContato from '../InfoContato'
 import InfoEx from '../InfoEx'
-import InfoEd from '../InfoEducacao'
 
 class InfoList extends Component {
 
